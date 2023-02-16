@@ -34,7 +34,13 @@ namespace UserInformation
 
 
 
-
+        public  void SetUserinformation(String fname, String mname, String lname, String address, String phone,
+                                                String college, String skills, String email)
+        {
+            //this function will call the private method which will add the userinformation given by the user
+            this.initiliseValueToTheUser(fname,mname
+                ,lname,address,phone,college,skills,email);
+        }
 
     }
 }

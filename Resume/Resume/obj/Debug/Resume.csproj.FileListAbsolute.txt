@@ -1,0 +1,7 @@
+D:\C# Project\Resume\Resume\bin\Debug\Resume.exe.config
+D:\C# Project\Resume\Resume\bin\Debug\Resume.exe
+D:\C# Project\Resume\Resume\bin\Debug\Resume.pdb
+D:\C# Project\Resume\Resume\obj\Debug\Resume.csproj.AssemblyReference.cache
+D:\C# Project\Resume\Resume\obj\Debug\Resume.csproj.CoreCompileInputs.cache
+D:\C# Project\Resume\Resume\obj\Debug\Resume.exe
+D:\C# Project\Resume\Resume\obj\Debug\Resume.pdb
