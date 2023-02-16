@@ -35,8 +35,7 @@ namespace Resume
 
             //creating a dictionary to store the user information....
             dynamic userinfo = new Dictionary<dynamic, dynamic>();
-
-            Welcome();
+            
 
           
 
@@ -46,6 +45,8 @@ namespace Resume
         }
         static void Main(string[] args)
         {
+            //Show the Welcome Window
+            Program.Welcome();
             Program.takeUserInfo();
             Console.ReadLine();
 
