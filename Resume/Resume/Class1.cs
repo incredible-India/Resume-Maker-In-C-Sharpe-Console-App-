@@ -42,5 +42,19 @@ namespace UserInformation
                 ,lname,address,phone,college,skills,email);
         }
 
+        public void showUserConfirmation()
+        {
+            Console.Clear();
+            Console.WriteLine("First Name :" +  this.fname);
+            Console.WriteLine("Middle Name :" +  this.mname);
+            Console.WriteLine("Last Name :" +  this.lname);
+            Console.WriteLine("Email :" +  this.email);
+            Console.WriteLine("Phone :" +  this.phone);
+            Console.WriteLine("Address:" + this.address );
+            Console.WriteLine("Skills:" + this.skills );
+            Console.WriteLine("College:" + this.college );
+
+        }
+
     }
 }

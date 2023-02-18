@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BasicFuctions; // all the basic function are defined in tis namespace..
+using BasicFuctions; // all the basic function are defined in this namespace..
 using Datavalidator;// this namspace contain the collection of validators..
+using UserInformation;//user class where all the user related information is stored..
 
 
 namespace Resume
@@ -27,9 +28,9 @@ namespace Resume
             string temp;
             string returnTypeOfValidator;
             
-            string [] userOPT = {"First Name","Middle Name","Last Name","Address","Phone","Skills","College"};
+            string [] userOPT = {"First Name","Middle Name","Last Name","Email","Address","Phone","Skills","College"};
        
-            Console.ReadLine();
+            //taking the user information...
             for (int i = 0; i < userOPT.Length; i++)
 			{
                 enterAgain:
@@ -61,6 +62,33 @@ namespace Resume
 
 
 			}
+
+          
+
+            //we have took the useronfo, Now we have to save this information in class of UserInformation define in class1 namespace
+            //saving userinformation in UserInformation
+
+            User user =  new User();//class of the user 
+            //saving the user information..
+            user.SetUserinformation(fname:userinfo["First Name"],
+                mname:userinfo["Middle Name"],lname:userinfo["Last Name"],
+                address:userinfo["Address"],
+                phone:userinfo["Phone"],college:userinfo["College"],
+                skills:userinfo["Skills"],email:userinfo["Email"]);
+            
+            //showing the entered data to the user for the confirmation;
+
+            user.showUserConfirmation();
+
+            
+        /*    foreach (KeyValuePair<string,string> entry in userinfo)
+        {
+               
+
+        Console.WriteLine($"{entry.Key}: {entry.Value}");
+        }*/
+
+           
                
             
 
