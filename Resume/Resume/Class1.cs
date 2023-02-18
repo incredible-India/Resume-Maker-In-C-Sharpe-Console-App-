@@ -54,6 +54,12 @@ namespace UserInformation
             Console.WriteLine("Skills:" + this.skills );
             Console.WriteLine("College:" + this.college );
 
+            
+        }
+
+        public void setSpecificUserInfo(int index,string Value)
+        {
+
         }
 
     }

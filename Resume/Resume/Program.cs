@@ -79,8 +79,234 @@ namespace Resume
             //showing the entered data to the user for the confirmation;
 
             user.showUserConfirmation();
+            Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("1: Edit Information");
+            Console.WriteLine("2: Show My Resume");
 
-            
+            char isEdit;
+
+            isEdit =  Char.Parse(Console.ReadLine());
+
+            if (isEdit == '1')
+            {
+                Console.Clear();
+                int count=0;
+                int option;
+                string EditedData;
+                //if user want to edit his information..
+                foreach (KeyValuePair<string,string> entry in userinfo)
+                 {
+                    
+                     Console.WriteLine($"Press {++count} To Edit {entry.Key}->{entry.Value}");
+                    
+
+                    
+                }
+                enterdata:
+                option = int.Parse(Console.ReadLine());
+
+                    if(option>=1 && option <=8)
+                    {
+                    if(option == 1)
+                    {
+                        enterAgain1:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "First Name");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain1;
+                        }
+
+
+                    } else if(option == 2)
+                    {
+                        enterAgain2:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Middle Name");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain2;
+                        }
+
+                    }else if(option == 3)
+                    {
+                        enterAgain3:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Last Name");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain3;
+                        }
+                    }
+
+                    else if(option == 4)
+                    {
+                        enterAgain4:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Email");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain4;
+                        }
+                    }
+                    else if (option == 5)
+                    {
+                        enterAgain5:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Address");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain5;
+                        }
+                    }else if(option == 6)
+                    {
+                        enterAgain6:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Phone");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain6;
+                        }
+                    }
+
+                    else if(option == 7)
+                    {
+                        enterAgain7:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "Skills");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain7;
+                        }
+                    }
+
+                    else if(option == 8)
+                    {
+                        enterAgain8:
+                        Console.Clear();
+                        Console.WriteLine("Enter the New Value For : " + "College");
+                        EditedData = Console.ReadLine();
+                        returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
+                        if(returnTypeOfValidator == "ok")
+                        {
+
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain8;
+                        }
+                    }
+
+                    }else
+                    {
+                        Console.WriteLine("invalid Choice.. \nEnter Again..\t");
+                        goto enterdata;
+                    }
+                
+
+            }else
+            {
+
+            }
         /*    foreach (KeyValuePair<string,string> entry in userinfo)
         {
                
