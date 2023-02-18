@@ -15,77 +15,16 @@ namespace Resume
 
     class Program
     {
-
-       
-       
-
-        //this method will taje the information of user..
-        public static void takeUserInfo()
+        //this method will ask the user to edit his information or Show the Resume as Web page
+       public static void ConfirmInfoEdition(Dictionary<string, string> userinfo)
         {
-
-            //creating a dictionary to store the user information....
-            dynamic userinfo = new Dictionary<string, string>();
-            string temp;
-            string returnTypeOfValidator;
-            
-            string [] userOPT = {"First Name","Middle Name","Last Name","Email","Address","Phone","Skills","College"};
-       
-            //taking the user information...
-            for (int i = 0; i < userOPT.Length; i++)
-			{
-                enterAgain:
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.SetCursorPosition(40, 12);  
-                Console.Write($"{i+1} : Enter Your {userOPT[i]}");
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.SetCursorPosition(40, 14);
-                temp = Console.ReadLine();
-                returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:temp,ilength:3);
-                
-                if (returnTypeOfValidator == "ok")
-                {
-                    userinfo.Add(userOPT[i],temp);
-                    continue;
-                }else
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.SetCursorPosition(40, 15);
-                    Console.Write($"Error : {returnTypeOfValidator}");
-                    Console.SetCursorPosition(40,16);
-                    
-                    Console.Write("Press Any Key to Enter Again");
-                    Console.ReadLine();
-                    goto enterAgain;
-                    
-                }
-
-
-			}
-
-          
-
-            //we have took the useronfo, Now we have to save this information in class of UserInformation define in class1 namespace
-            //saving userinformation in UserInformation
-
-            User user =  new User();//class of the user 
-            //saving the user information..
-            user.SetUserinformation(fname:userinfo["First Name"],
-                mname:userinfo["Middle Name"],lname:userinfo["Last Name"],
-                address:userinfo["Address"],
-                phone:userinfo["Phone"],college:userinfo["College"],
-                skills:userinfo["Skills"],email:userinfo["Email"]);
-            
-            //showing the entered data to the user for the confirmation;
-
-            user.showUserConfirmation();
+            char isEdit;
+            string returnTypeOfValidator ;
             Console.WriteLine("\n");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("1: Edit Information");
             Console.WriteLine("2: Show My Resume");
-
-            char isEdit;
-
+            
             isEdit =  Char.Parse(Console.ReadLine());
 
             if (isEdit == '1')
@@ -215,7 +154,7 @@ namespace Resume
                         }
                         else
                         {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.SetCursorPosition(40, 15);
                     Console.Write($"Error : {returnTypeOfValidator}");
                     Console.SetCursorPosition(40,16);
@@ -307,6 +246,72 @@ namespace Resume
             {
 
             }
+        }
+       
+
+        //this method will taje the information of user..
+        public static void takeUserInfo()
+        {
+
+            //creating a dictionary to store the user information....
+            dynamic userinfo = new Dictionary<string, string>();
+            string temp;
+            string returnTypeOfValidator;
+            
+            string [] userOPT = {"First Name","Middle Name","Last Name","Email","Address","Phone","Skills","College"};
+       
+            //taking the user information...
+            for (int i = 0; i < userOPT.Length; i++)
+			{
+                enterAgain:
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.SetCursorPosition(40, 12);  
+                Console.Write($"{i+1} : Enter Your {userOPT[i]}");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.SetCursorPosition(40, 14);
+                temp = Console.ReadLine();
+                returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:temp,ilength:3);
+                
+                if (returnTypeOfValidator == "ok")
+                {
+                    userinfo.Add(userOPT[i],temp);
+                    continue;
+                }else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain;
+                    
+                }
+
+
+			}
+
+          
+
+            //we have took the useronfo, Now we have to save this information in class of UserInformation define in class1 namespace
+            //saving userinformation in UserInformation
+
+            User user =  new User();//class of the user 
+            //saving the user information..
+            user.SetUserinformation(fname:userinfo["First Name"],
+                mname:userinfo["Middle Name"],lname:userinfo["Last Name"],
+                address:userinfo["Address"],
+                phone:userinfo["Phone"],college:userinfo["College"],
+                skills:userinfo["Skills"],email:userinfo["Email"]);
+            
+            //showing the entered data to the user for the confirmation;
+
+            user.showUserConfirmation();
+            
+
+            Program.ConfirmInfoEdition(userinfo);
         /*    foreach (KeyValuePair<string,string> entry in userinfo)
         {
                
