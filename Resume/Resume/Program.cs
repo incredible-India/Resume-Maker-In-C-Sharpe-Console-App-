@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BasicFuctions; // all the basic function are defined in tis namespace..
+using Datavalidator;// this namspace contain the collection of validators..
 
 
 namespace Resume
@@ -22,11 +23,45 @@ namespace Resume
         {
 
             //creating a dictionary to store the user information....
-            dynamic userinfo = new Dictionary<dynamic, dynamic>();
+            dynamic userinfo = new Dictionary<string, string>();
+            string temp;
+            string returnTypeOfValidator;
             
+            string [] userOPT = {"First Name","Middle Name","Last Name","Address","Phone","Skills","College"};
+       
+            Console.ReadLine();
+            for (int i = 0; i < userOPT.Length; i++)
+			{
+                enterAgain:
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.SetCursorPosition(40, 12);  
+                Console.Write($"{i+1} : Enter Your {userOPT[i]}");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.SetCursorPosition(40, 14);
+                temp = Console.ReadLine();
+                returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:temp,ilength:3);
+                
+                if (returnTypeOfValidator == "ok")
+                {
+                    userinfo.Add(userOPT[i],temp);
+                    continue;
+                }else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.SetCursorPosition(40, 15);
+                    Console.Write($"Error : {returnTypeOfValidator}");
+                    Console.SetCursorPosition(40,16);
+                    
+                    Console.Write("Press Any Key to Enter Again");
+                    Console.ReadLine();
+                    goto enterAgain;
+                    
+                }
 
-          
 
+			}
+               
             
 
 
@@ -43,16 +78,19 @@ namespace Resume
             //now show the ption to the user 
             Console.Clear();
             BasicFn.showOption();
-
+            TakeAgain: 
+                Console.SetCursorPosition(40, 18);
+                userChoice =  Char.Parse(Console.ReadLine());
          
             try
             {
-            TakeAgain:
-                Console.SetCursorPosition(40, 18);
-                userChoice =  Char.Parse(Console.ReadLine());
+            
 
                 if (userChoice == '1')
                 {
+
+                    Program.takeUserInfo();
+
 
                 }else if(userChoice == '2')
                 {
@@ -76,7 +114,7 @@ namespace Resume
             }
 
 
-            Program.takeUserInfo();
+            
             Console.ReadLine();
 
         }

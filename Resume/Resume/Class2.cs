@@ -9,26 +9,21 @@ namespace Datavalidator
     class CheckTheUserInfoValidation
     {
         //this method will check the userinformation and raise the Error if not found accordingly..
-        public static String  CheckData(dynamic data,int length,String type)
+        public static String  CheckData(string data,int ilength)
         {
 
-            if(data.GetType() == type)
-            {
-                if(data.Length == length)
+          
+                if(ilength < data.Length)
                 {
                     return "ok";
                 }
                 else
                 {
-                    return $"The Data Length Should be {length}";
+                    return $"The Data Length Should be {ilength}";
                 }
                 
-            }else
-            {
-                return $"Data Type Must Be {type}";
-            }
+            
 
-            return "ok";
 
         }
 

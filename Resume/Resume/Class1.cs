@@ -8,18 +8,18 @@ namespace UserInformation
 {
     class User
     {
-        private String fname;
-        private String mname;
-        private String lname;
-        private String address;
-        private String phone;
-        private String college;
-        private String skills;
-        private String email;
+        private string fname;
+        private string mname;
+        private string lname;
+        private string address;
+        private string phone;
+        private string college;
+        private string skills;
+        private string email;
 
 
-        private  void initiliseValueToTheUser(String fname,String mname,String lname,String address,String phone,
-                                                String college,String skills,String email)
+        private  void initiliseValueToTheUser(string fname,string mname,string lname,string address,string phone,
+                                                string college,string skills,string email)
         {
             this.fname = fname;
             this.mname = mname;
@@ -34,8 +34,8 @@ namespace UserInformation
 
 
 
-        public  void SetUserinformation(String fname, String mname, String lname, String address, String phone,
-                                                String college, String skills, String email)
+        public  void SetUserinformation(string fname, string mname, string lname, string address, string phone,
+                                                string college, string skills, string email)
         {
             //this function will call the private method which will add the userinformation given by the user
             this.initiliseValueToTheUser(fname,mname
