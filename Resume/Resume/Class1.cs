@@ -60,6 +60,34 @@ namespace UserInformation
         public void setSpecificUserInfo(int index,string Value)
         {
 
+            if(index == 1)
+            {
+                this.fname = Value;
+                return;
+            }else if (index == 2)
+            {
+                this.mname = Value;
+            }else if(index == 3)
+            {
+                this.lname =  Value;
+            }else if(index == 4)
+            {
+                this.email = Value;
+            }else if(index== 5)
+            {
+                this.address = Value;
+            }else if(index == 6)
+            {
+                this.phone = Value;
+            }else if(index == 7)
+            {
+                this.skills = Value;
+            }else if(index == 8)
+            {
+                this.college = Value;
+            }
+
+
         }
 
     }

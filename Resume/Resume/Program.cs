@@ -18,6 +18,7 @@ namespace Resume
         //this method will ask the user to edit his information or Show the Resume as Web page
        public static void ConfirmInfoEdition(Dictionary<string, string> userinfo)
         {
+            User user = new User();
             char isEdit;
             string returnTypeOfValidator ;
             Console.WriteLine("\n");
@@ -56,7 +57,10 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                            user.setSpecificUserInfo(1,EditedData);
 
+                            user.showUserConfirmation();
+                            
                         }
                         else
                         {
@@ -80,7 +84,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-
+                        user.setSpecificUserInfo(2,EditedData);
+                        user.showUserConfirmation();
                         }
                         else
                         {
@@ -103,6 +108,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                        user.setSpecificUserInfo(3,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
@@ -127,6 +134,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                        user.setSpecificUserInfo(4,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
@@ -150,6 +159,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                            user.setSpecificUserInfo(5,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
@@ -172,6 +183,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                         user.setSpecificUserInfo(6,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
@@ -196,6 +209,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                            user.setSpecificUserInfo(7,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
@@ -220,6 +235,8 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                            user.setSpecificUserInfo(8,EditedData);
+                            user.showUserConfirmation();
 
                         }
                         else
