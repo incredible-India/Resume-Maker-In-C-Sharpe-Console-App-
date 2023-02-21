@@ -15,25 +15,18 @@ namespace Resume
 
     class Program
     {
-        //this method will ask the user to edit his information or Show the Resume as Web page
-       public static void ConfirmInfoEdition(Dictionary<string, string> userinfo)
-        {
-            User user = new User();
-            char isEdit;
-            string returnTypeOfValidator ;
-            Console.WriteLine("\n");
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("1: Edit Information");
-            Console.WriteLine("2: Show My Resume");
-            
-            isEdit =  Char.Parse(Console.ReadLine());
+        //editing process
 
-            if (isEdit == '1')
-            {
-                Console.Clear();
+       public static void StartEditing(Dictionary<string, string> userinfo)
+        {
+
+
+                    User user = new User();
+                 string returnTypeOfValidator ;
                 int count=0;
                 int option;
                 string EditedData;
+               Console.Clear();
                 //if user want to edit his information..
                 foreach (KeyValuePair<string,string> entry in userinfo)
                  {
@@ -57,9 +50,11 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                            user.setSpecificUserInfo(1,EditedData);
+                            user.setSpecificUserInfo(index:1,Value:EditedData);
 
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo);
                             
                         }
                         else
@@ -257,7 +252,26 @@ namespace Resume
                         Console.WriteLine("invalid Choice.. \nEnter Again..\t");
                         goto enterdata;
                     }
+        }
+        //this method will ask the user to edit his information or Show the Resume as Web page
+       public static void ConfirmInfoEdition(Dictionary<string, string> userinfo)
+        {
+            User user = new User();
+            char isEdit;
+           
+            Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("1: Edit Information");
+            Console.WriteLine("2: Show My Resume");
+            
+            isEdit =  Char.Parse(Console.ReadLine());
+
+            if (isEdit == '1')
+            {
+
+                //this function will start editing 
                 
+                StartEditing(userinfo);
 
             }else
             {

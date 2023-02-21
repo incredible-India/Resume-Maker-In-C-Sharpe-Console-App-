@@ -44,7 +44,7 @@ namespace UserInformation
 
         public void showUserConfirmation()
         {
-            Console.Clear();
+           Console.Clear();
             Console.WriteLine("First Name :" +  this.fname);
             Console.WriteLine("Middle Name :" +  this.mname);
             Console.WriteLine("Last Name :" +  this.lname);
@@ -62,8 +62,15 @@ namespace UserInformation
 
             if(index == 1)
             {
+                fname = Value;
+            }
+
+            /*if(index == 1)
+            {
+                
                 this.fname = Value;
-                return;
+                
+                
             }else if (index == 2)
             {
                 this.mname = Value;
@@ -85,7 +92,7 @@ namespace UserInformation
             }else if(index == 8)
             {
                 this.college = Value;
-            }
+            } /**/
 
 
         }
