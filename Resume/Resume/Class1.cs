@@ -62,7 +62,11 @@ namespace UserInformation
 
             if(index == 1)
             {
-                fname = Value;
+                 this.fname = Value;
+            }
+            if(index == 2)
+            {
+                lname = Value;
             }
 
             /*if(index == 1)
