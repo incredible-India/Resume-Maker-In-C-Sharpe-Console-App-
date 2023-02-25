@@ -15,13 +15,14 @@ namespace Resume
 
     class Program
     {
+   
         //editing process
 
-       public static void StartEditing(Dictionary<string, string> userinfo)
+       public static void StartEditing(Dictionary<string, string> userinfo,User user)
         {
 
 
-                    User user = new User();
+                  
                  string returnTypeOfValidator ;
                 int count=0;
                 int option;
@@ -50,11 +51,13 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
+                           
+                            userinfo["First Name"] = EditedData;
                             user.setSpecificUserInfo(index:1,Value:EditedData);
-
+                        
                             user.showUserConfirmation();
                             
-                            ConfirmInfoEdition(userinfo);
+                            ConfirmInfoEdition(userinfo,user);
                             
                         }
                         else
@@ -79,8 +82,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                        user.setSpecificUserInfo(2,EditedData);
-                        user.showUserConfirmation();
+                           userinfo["Last Name"] = EditedData;
+                            user.setSpecificUserInfo(index:2,Value:EditedData);
+                        
+                            user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
                         }
                         else
                         {
@@ -103,8 +110,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                        user.setSpecificUserInfo(3,EditedData);
+                        userinfo["Middle Name"] = EditedData;
+                            user.setSpecificUserInfo(index:3,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -129,8 +140,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                        user.setSpecificUserInfo(4,EditedData);
+                              userinfo["Email"] = EditedData;
+                            user.setSpecificUserInfo(index:4,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -154,8 +169,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                            user.setSpecificUserInfo(5,EditedData);
+                        userinfo["Address"] = EditedData;
+                            user.setSpecificUserInfo(index:5,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -178,8 +197,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                         user.setSpecificUserInfo(6,EditedData);
+                            userinfo["Phone"] = EditedData;
+                            user.setSpecificUserInfo(index:6,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -203,9 +226,12 @@ namespace Resume
                         EditedData = Console.ReadLine();
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
-                        {
-                            user.setSpecificUserInfo(7,EditedData);
+                        {   userinfo["Skills"] = EditedData;
+                            user.setSpecificUserInfo(index:7,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -230,8 +256,12 @@ namespace Resume
                         returnTypeOfValidator= CheckTheUserInfoValidation.CheckData(data:EditedData,ilength:3);
                         if(returnTypeOfValidator == "ok")
                         {
-                            user.setSpecificUserInfo(8,EditedData);
+                            userinfo["College"] = EditedData;
+                            user.setSpecificUserInfo(index:8,Value:EditedData);
+                        
                             user.showUserConfirmation();
+                            
+                            ConfirmInfoEdition(userinfo,user);
 
                         }
                         else
@@ -254,9 +284,9 @@ namespace Resume
                     }
         }
         //this method will ask the user to edit his information or Show the Resume as Web page
-       public static void ConfirmInfoEdition(Dictionary<string, string> userinfo)
+       public static void ConfirmInfoEdition(Dictionary<string, string> userinfo,User user)
         {
-            User user = new User();
+            //User user = new User();
             char isEdit;
            
             Console.WriteLine("\n");
@@ -271,7 +301,8 @@ namespace Resume
 
                 //this function will start editing 
                 
-                StartEditing(userinfo);
+                StartEditing(userinfo,user);
+
 
             }else
             {
@@ -342,7 +373,7 @@ namespace Resume
             user.showUserConfirmation();
             
 
-            Program.ConfirmInfoEdition(userinfo);
+            Program.ConfirmInfoEdition(userinfo,user);
         /*    foreach (KeyValuePair<string,string> entry in userinfo)
         {
                

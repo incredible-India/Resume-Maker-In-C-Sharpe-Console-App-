@@ -60,16 +60,9 @@ namespace UserInformation
         public void setSpecificUserInfo(int index,string Value)
         {
 
-            if(index == 1)
-            {
-                 this.fname = Value;
-            }
-            if(index == 2)
-            {
-                lname = Value;
-            }
+          
 
-            /*if(index == 1)
+           if(index == 1)
             {
                 
                 this.fname = Value;
@@ -96,7 +89,7 @@ namespace UserInformation
             }else if(index == 8)
             {
                 this.college = Value;
-            } /**/
+            }
 
 
         }
