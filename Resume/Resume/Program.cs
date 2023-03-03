@@ -409,7 +409,7 @@ namespace Resume
 
                 if (userChoice == '1')
                 {
-
+                    FileHandling.CreateDirectoryAndHTMLFile();
                     Program.takeUserInfo();
 
 

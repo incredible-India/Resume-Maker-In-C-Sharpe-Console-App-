@@ -5,3 +5,10 @@ D:\C# Project\Resume\Resume\obj\Debug\Resume.csproj.AssemblyReference.cache
 D:\C# Project\Resume\Resume\obj\Debug\Resume.csproj.CoreCompileInputs.cache
 D:\C# Project\Resume\Resume\obj\Debug\Resume.exe
 D:\C# Project\Resume\Resume\obj\Debug\Resume.pdb
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\obj\Debug\Resume.csproj.AssemblyReference.cache
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\obj\Debug\Resume.csproj.CoreCompileInputs.cache
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\obj\Debug\Resume.exe
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\obj\Debug\Resume.pdb
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\bin\Debug\Resume.exe.config
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\bin\Debug\Resume.exe
+H:\Resume\Resume-Maker-In-C-Sharpe-Console-App-\Resume\Resume\bin\Debug\Resume.pdb
