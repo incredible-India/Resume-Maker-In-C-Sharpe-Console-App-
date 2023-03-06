@@ -8,14 +8,14 @@ namespace UserInformation
 {
     class User
     {
-        private string fname;
-        private string mname;
-        private string lname;
-        private string address;
-        private string phone;
-        private string college;
-        private string skills;
-        private string email;
+        public string  fname;
+        public string mname;
+        public string lname;
+        public string address;
+        public string phone;
+        public string college;
+        public string skills;
+        public string email;
 
 
         private  void initiliseValueToTheUser(string fname,string mname,string lname,string address,string phone,

@@ -306,7 +306,7 @@ namespace Resume
 
             }else if(isEdit == '2')
             {
-                FileHandling.CreateDirectoryAndHTMLFile();
+                FileHandling.CreateDirectoryAndHTMLFile(user);
             }
             else
             {
