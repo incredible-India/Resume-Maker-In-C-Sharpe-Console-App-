@@ -288,7 +288,7 @@ namespace Resume
         {
             //User user = new User();
             char isEdit;
-           
+           dataAgain:
             Console.WriteLine("\n");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("1: Edit Information");
@@ -304,9 +304,14 @@ namespace Resume
                 StartEditing(userinfo,user);
 
 
-            }else
+            }else if(isEdit == '2')
             {
-
+                FileHandling.CreateDirectoryAndHTMLFile();
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice ");
+                goto dataAgain;
             }
         }
        
@@ -409,8 +414,21 @@ namespace Resume
 
                 if (userChoice == '1')
                 {
-                    FileHandling.CreateDirectoryAndHTMLFile();
-                    Program.takeUserInfo();
+                    bool toProceed= FileHandling.CheckingIntialDirAndFiles();
+                    //it will check weather the file and folder exist or not
+                    if(toProceed)
+                    {
+                        Program.takeUserInfo();
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Some File/Folder Are Deleted We cannot proceed");
+                        Console.ReadLine();
+                        BasicFn.ExitFun();
+                    }  
+                    
+                    
 
 
                 }else if(userChoice == '2')
