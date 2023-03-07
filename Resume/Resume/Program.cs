@@ -440,6 +440,10 @@ namespace Resume
                     
 
 
+                }else if(userChoice == '2')
+                {
+
+                      System.Diagnostics.Process.Start("cmd.exe","/K   cd.. /../../../../../Temp  &  user.html");
                 }
                 
              
