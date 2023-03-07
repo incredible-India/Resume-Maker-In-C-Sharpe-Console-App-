@@ -42,6 +42,8 @@ class FileHandling
      
         //first we will check the main directory for resume html exsist or not
         bool isExist = Directory.Exists(@"./../../../../UserResume");
+
+        
         
 
         if(isExist)
@@ -70,17 +72,23 @@ class FileHandling
     {
         bool CheckDirAndFiles = CheckingIntialDirAndFiles();
 
+
+       
+
         
         if(CheckDirAndFiles)
         {
             //making an temp folder to put the user.html file
             DirectoryInfo df  = new DirectoryInfo(@"./../../../../Temp");
             
-            if(!df.Exists)
-            {
-                df.Create();
+            if(Directory.Exists(@"./../../../../Temp"))
+                {
+                
+                Directory.Delete(@"./../../../../Temp",true);
+            
             }
-
+                df.Create();
+       
             //now create the html file..
 
             if(File.Exists(@"./../../../../Temp/user.html"))
@@ -130,8 +138,12 @@ class FileHandling
             //copy Svg File from User Resume to Original resume
             File.Copy(@"./../../../../UserResume/1456160-ffffff.svg",@"./../../../../Temp/1456160-ffffff.svg");
             fs.Close();
+           
+            System.Diagnostics.Process.Start("cmd.exe","/K   cd.. /../../../../../Temp  &  user.html");
 
-        
+            
+           
+                
             
            
         }else

@@ -33,8 +33,8 @@ namespace BasicFuctions
             Console.Write("1 :  Create New Resume");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.SetCursorPosition(40, 14);
-            Console.Write("2 :  See Previous Resume");
-            Console.ForegroundColor = ConsoleColor.DarkRed;
+           // Console.Write("2 :  See Previous Resume");
+           // Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.SetCursorPosition(40, 16);
             Console.Write("3 :  Exist");
 

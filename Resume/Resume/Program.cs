@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using BasicFuctions; // all the basic function are defined in this namespace..
 using Datavalidator;// this namspace contain the collection of validators..
 using UserInformation;//user class where all the user related information is stored..
-
+using System.IO;
+using System.Diagnostics;
 
 namespace Resume
 {
@@ -307,6 +308,12 @@ namespace Resume
             }else if(isEdit == '2')
             {
                 FileHandling.CreateDirectoryAndHTMLFile(user);
+                
+                
+                     
+               
+             
+              
             }
             else
             {
@@ -396,10 +403,12 @@ namespace Resume
         {
 
             char userChoice;
-
+            
 
             //Show the Welcome Window
             Console.Clear();
+ 
+
             BasicFn.Welcome();
             //now show the ption to the user 
             Console.Clear();
@@ -431,10 +440,11 @@ namespace Resume
                     
 
 
-                }else if(userChoice == '2')
-                {
-                    
-                }else if(userChoice == '3')
+                }
+                
+             
+                
+                else if(userChoice == '3')
                 {
                     Console.Clear();
                     BasicFn.ExitFun();

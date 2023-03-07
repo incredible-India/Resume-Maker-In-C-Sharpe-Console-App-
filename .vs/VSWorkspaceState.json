@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Resume",
-    "\\Resume\\Resume"
+    "\\Resume\\Resume",
+    "\\Resume\\Resume\\bin",
+    "\\Resume\\Resume\\bin\\Debug"
   ],
   "SelectedNode": "\\Resume\\Resume\\Program.cs",
   "PreviewInSolutionExplorer": false
